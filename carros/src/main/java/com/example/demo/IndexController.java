@@ -1,6 +1,9 @@
 package com.example.demo;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,13 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 	
 	@GetMapping
-	public String helloSpringBoot() {
-		return "Olá Spring Boot";
+	public String get() {
+		return "get Spring Boot";
 	}
 	
-	@GetMapping("/barra")
-	public String testeBarra() {
-		return "Teste concluido";
+	@PostMapping
+	public String post() {
+		return "post Spring Boot";
+	}
+	
+	@PutMapping()
+	public String put() {
+		return "put Spring Boot";
+	}
+	
+	@DeleteMapping
+	public String delete() {
+		return "delete Spring Boot";
 	}
 
 }
